@@ -1,14 +1,6 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  Icon,
-  IconButton,
-  Tooltip,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Tooltip } from "@chakra-ui/react";
 import React from "react";
 import { DataType, Project, ProjectType } from "../utils/types";
-import { MdOpenInNew } from "react-icons/md";
 import { dataTypes } from "../HomePage";
 import { Link } from "react-router-dom";
 import LinkIconButton from "./LinkIconButton";
@@ -20,9 +12,10 @@ export default function ProjectCard({
   types,
   data,
   url,
+  isPrototype = false,
 }: Project) {
   return (
-    <Flex direction="column" gap={4} minWidth="xs">
+    <Flex direction="column" gap={4} minWidth="xs" width={["100%", "xs"]}>
       <Tooltip
         hasArrow
         label={description}
@@ -77,7 +70,7 @@ export default function ProjectCard({
             ))}
           </Flex>
         </Flex>
-        {url != null && <LinkIconButton url={url} />}
+        {url != null && <LinkIconButton url={url} isPrototype={isPrototype} />}
       </Flex>
     </Flex>
   );

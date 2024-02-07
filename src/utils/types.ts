@@ -13,6 +13,7 @@ export interface Project {
   url?: string;
   youtube?: string;
   isPrivate?: boolean;
+  isPrototype?: boolean;
   notes?: {
     location: string;
     action: string;

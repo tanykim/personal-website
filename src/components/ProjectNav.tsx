@@ -17,7 +17,7 @@ export default function ProjectNav({ prevProject, nextProject }: Props) {
       mt={8}
       pt={8}
     >
-      {prevProject != null && (
+      {prevProject != null ? (
         <Flex gap={1} align="center">
           <span className="material-symbols-outlined" style={{ fontSize: 16 }}>
             arrow_back
@@ -26,6 +26,8 @@ export default function ProjectNav({ prevProject, nextProject }: Props) {
             <Text variant="link">{prevProject.title}</Text>
           </Link>
         </Flex>
+      ) : (
+        <div />
       )}
       {nextProject != null && (
         <Flex gap={1} align="center">

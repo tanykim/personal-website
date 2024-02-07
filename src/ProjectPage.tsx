@@ -15,8 +15,8 @@ import { dataTypes, projectTypes } from "./HomePage";
 import ProjectTypeLabel from "./components/ProjectTypeLabel";
 import Header from "./components/Header";
 import { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
 import ProjectNav from "./components/ProjectNav";
+import MarkDown from "./components/MarkDown";
 
 export default function ProjectPage() {
   const { projectId } = useParams();
@@ -32,6 +32,7 @@ export default function ProjectPage() {
     url,
     youtube,
     notes,
+    isPrototype,
   } = projects[index];
 
   function getProjectType(id: ProjectType) {
@@ -125,7 +126,7 @@ export default function ProjectPage() {
                   rightIcon={<MdOpenInNew />}
                   onClick={() => window.open(url, "_blank")}
                 >
-                  Open project
+                  Open {isPrototype ? "prototype" : "project"}
                 </Button>
               )}
               {youtube != null && (
@@ -163,7 +164,7 @@ export default function ProjectPage() {
               ))}
             </UnorderedList>
           )}
-          {content != null && <ReactMarkdown children={content} />}
+          {content != null && <MarkDown content={content} />}
         </Flex>
         <ProjectNav
           prevProject={index > 0 ? projects[index - 1] : null}

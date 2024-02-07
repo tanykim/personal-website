@@ -1,6 +1,6 @@
 import type { Project } from "./utils/types";
 
-export const projects: Project[] = [
+const allProjects: Project[] = [
   {
     id: "best-bookshelf",
     title: "Best bookshelf",
@@ -22,15 +22,6 @@ export const projects: Project[] = [
         ],
       },
     ],
-  },
-  {
-    id: "overlaps-of-the-three",
-    title: "Overlaps of the three",
-    year: 2019,
-    description: "Analytics product for the overlap of three datasets",
-    types: ["vis", "product", "eng", "analytics"],
-    data: ["social"],
-    isPrivate: true,
   },
   {
     id: "interactive-knitting-patterns",
@@ -61,7 +52,7 @@ export const projects: Project[] = [
   },
   {
     id: "10-years-of-twitter",
-    title: "10 years of twitter",
+    title: "10 years of Twitter",
     year: 2017,
     description: "Data visualization of +102K tweets of a course of 10 years",
     url: "http://tany.kim/twitter",
@@ -77,6 +68,15 @@ export const projects: Project[] = [
         ],
       },
     ],
+  },
+  {
+    id: "shades-of-exercise",
+    title: "Shades of exercise",
+    year: 2020,
+    description: "Data visualization of yearly exercise log",
+    url: "http://tany.kim/exercise/",
+    types: ["vis", "eng"],
+    data: ["personal", "sports"],
   },
   {
     id: "julie-and-julia",
@@ -98,6 +98,17 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "overlaps-of-the-three",
+    title: "Overlaps of the three",
+    year: 2019,
+    description: "Analytics product for the overlaps of three datasets",
+    types: ["vis", "product", "eng", "analytics"],
+    data: ["social"],
+    url: "https://projects.tany.kim/overlaps-of-the-three/",
+    isPrototype: true,
+    // isPrivate: true,
+  },
+  {
     id: "master-swim-workout",
     title: "Master swim workout",
     year: 2023,
@@ -106,22 +117,13 @@ export const projects: Project[] = [
     types: ["product", "eng"],
     data: ["sports"],
   },
-
-  {
-    id: "shades-of-exercise",
-    title: "Shades of exercise",
-    year: 2020,
-    description: "Data visualization of yearly exercise log",
-    url: "http://tany.kim/exercise/",
-    types: ["vis", "eng"],
-    data: ["personal", "sports"],
-  },
   {
     id: "fans-or-enemies",
     title: "Fans or enemies",
     year: 2017,
     description:
       'Data visualization of sports fans\' "favorite" teams on social media',
+    url: "https://projects.tany.kim/shared-fans",
     types: ["vis", "eng", "analytics", "research"],
     data: ["sports", "social"],
     youtube: "https://youtu.be/JUkX8-SR62Q",
@@ -138,9 +140,10 @@ export const projects: Project[] = [
     id: "swimmers-history",
     title: "Swimmers' history",
     year: 2017,
+    finalYear: 2019,
     description:
       "Data visualization of major international swimming competitions",
-    url: "http://tany.kim/swimmers-history/",
+    url: "https://projects.tany.kim/swimmers-history/",
     types: ["vis", "eng"],
     data: ["sports"],
     notes: [
@@ -187,17 +190,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "road-to-masterpiece",
-    title: "Road to masterpiece",
-    year: 2015,
-    finalYear: 2018,
-    description:
-      "Data visualization of 61 film directors' career on the way to the Oscar's best director",
-    url: "http://tany.kim/masterpiece/",
-    types: ["vis", "eng", "analytics"],
-    data: ["other"],
-  },
-  {
     id: "commute",
     title: "Commute",
     year: 2014,
@@ -214,6 +206,17 @@ export const projects: Project[] = [
         links: ["http://tany.kim/papers/commute_cameraReady.pdf"],
       },
     ],
+  },
+  {
+    id: "road-to-masterpiece",
+    title: "Road to masterpiece",
+    year: 2015,
+    finalYear: 2018,
+    description:
+      "Data visualization of 61 film directors' career on the way to the Oscar's best director",
+    url: "http://tany.kim/masterpiece/",
+    types: ["vis", "eng", "analytics"],
+    data: ["other"],
   },
   {
     id: "very-personal-film-logs",
@@ -242,3 +245,5 @@ export const projects: Project[] = [
     ],
   },
 ];
+
+export const projects = allProjects.filter((project) => !project.isPrivate);

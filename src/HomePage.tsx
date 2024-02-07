@@ -17,9 +17,9 @@ export const projectTypes: { id: ProjectType; label: string }[] = [
 
 export const dataTypes: { id: DataType; icon: string; label: string }[] = [
   { id: "personal", icon: "favorite", label: "Personal" },
-  { id: "sports", icon: "sports_baseball", label: "Sports" },
-  { id: "social", icon: "thumb_up", label: "Social Media" },
-  { id: "other", icon: "pet_supplies", label: "Other" },
+  { id: "sports", icon: "sports_baseball", label: "Sports / exercise" },
+  { id: "social", icon: "thumb_up", label: "Social media" },
+  { id: "other", icon: "comic_bubble", label: "Other" },
 ];
 
 function getYear(): number {
@@ -36,7 +36,7 @@ function getMonth(): string {
 export default function Home() {
   return (
     <Box margin="0 auto" maxWidth="6xl" px={[2, 4]} py={[4, 4, 8, 16]}>
-      <Flex direction="column" gap={16}>
+      <Flex direction="column" gap={[8, 16]}>
         <Box>
           <Heading as="h1" size="2xl" mb={4}>
             Tanyoung Kim
@@ -67,15 +67,13 @@ export default function Home() {
             </Flex>
           </Flex>
         </Box>
-        <Flex gap={12} wrap="wrap">
-          {projects
-            .filter((project) => !project.isPrivate)
-            .map((project) => (
-              <ProjectCard key={project.id} {...project} />
-            ))}
+        <Flex gap={[8, 12]} wrap="wrap">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} {...project} />
+          ))}
         </Flex>
         <Box color="secondary">
-          <Flex wrap="wrap" gap={4} mb={4}>
+          <Flex wrap="wrap" gap={4} mb={4} fontSize="xl">
             <Link to="/about-me">
               <Text variant="link">About me</Text>
             </Link>

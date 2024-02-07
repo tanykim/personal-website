@@ -45,6 +45,21 @@ export const theme = extendTheme({
         fontWeight: 600,
       },
       ".markdown": {
+        h1: {
+          fontSize: "3xl",
+          marginTop: 4,
+          ":not(:first-child)": {
+            marginTop: 8,
+          },
+          paddingTop: 8,
+          paddingBottom: 4,
+          borderTopWidth: 1,
+          borderTopColor: "gray.200",
+        },
+        h2: {
+          fontSize: "2xl",
+          paddingBottom: 2,
+        },
         p: {
           fontSize: "lg",
           lineHeight: "tall",
@@ -52,6 +67,17 @@ export const theme = extendTheme({
         },
         a: {
           textDecoration: "underline",
+        },
+        ul: {
+          listStyleType: "none",
+          li: {
+            paddingLeft: 4,
+            ":not(:last-child)": {
+              marginBottom: 4,
+            },
+            borderLeftWidth: 4,
+            borderLeftColor: "gray.200",
+          },
         },
       },
     },

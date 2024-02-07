@@ -1,11 +1,17 @@
 import { Tooltip, IconButton, Icon } from "@chakra-ui/react";
 import { MdOpenInNew } from "react-icons/md";
 
-export default function LinkIconButton({ url }: { url: string }) {
+export default function LinkIconButton({
+  url,
+  isPrototype,
+}: {
+  url: string;
+  isPrototype: boolean;
+}) {
   return (
     <Tooltip
       hasArrow
-      label="Open project in new tab"
+      label={`Open ${isPrototype ? "prototype" : "project"} in new tab`}
       bg="gray.700"
       color="white"
       fontSize="md"
