@@ -34,15 +34,15 @@ const textTheme = defineStyleConfig({
 
 export const theme = extendTheme({
   fonts: {
-    heading: "'IBM Plex Sans', -apple-system, 'Helvetica Neue', serif",
-    body: "'IBM Plex Sans', -apple-system, 'Helvetica Neue', serif",
+    heading: "'Funnel Sans', -apple-system, 'Helvetica Neue', serif",
+    body: "'Funnel Sans', -apple-system, 'Helvetica Neue', serif",
   },
   styles: {
     global: {
       h1: {
         color: "gray.700",
         letterSpacing: "0.025em",
-        fontWeight: 600,
+        fontWeight: 500,
       },
       ".markdown": {
         h1: {

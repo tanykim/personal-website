@@ -9,15 +9,12 @@ interface Props {
 export default function Header({ title, year, description }: Props) {
   return (
     <>
-      <Flex gap={1} align="center">
-        <Link to="/">
-          <Text variant="link">Home</Text>
-        </Link>
-        {/* <span className="material-symbols-outlined">chevron_right</span> */}
-      </Flex>
+      <Link to="/">
+        <Text variant="link">Home</Text>
+      </Link>
       <Box position="sticky" top={0} backgroundColor="white" pb={4} zIndex={10}>
-        <Flex align="baseline" gap={2}>
-          <Heading as="h1" size="2xl" mb={1} pt={4}>
+        <Flex align="baseline" gap={2} mb={2}>
+          <Heading as="h1" size="2xl" pt={4}>
             {title}
           </Heading>
           {year != null && <Text fontSize="xl">({year})</Text>}

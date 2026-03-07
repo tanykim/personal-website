@@ -25,8 +25,7 @@ export default function ProjectCard({
         borderRadius={4}
         px={4}
         py={2}
-        placement="top"
-      >
+        placement="top">
         <Link to={id}>
           <Box
             backgroundImage={`url(${import.meta.env.BASE_URL}images/${id}-sm.png)`}
@@ -51,9 +50,9 @@ export default function ProjectCard({
         </Link>
       </Tooltip>
       <Flex gap={2} justify="space-between">
-        <Flex direction="column" gap={1}>
+        <Flex direction="column" gap={2}>
           <Flex gap={2} align="center">
-            <Heading as="h2" size="md" fontWeight={400}>
+            <Heading as="h2" size="md" fontWeight={500}>
               {title}
             </Heading>
             <Flex gap={1}>

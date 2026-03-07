@@ -39,7 +39,7 @@ export default function Home() {
     <Box margin="0 auto" maxWidth="6xl" px={[2, 4]} py={[4, 4, 8, 16]}>
       <Flex direction="column" gap={[8, 16]}>
         <Box>
-          <Heading as="h1" size="2xl" mb={4}>
+          <Heading as="h1" size="2xl" mb={4} fontWeight={500}>
             Tanyoung Kim
           </Heading>
           <Heading size="md" fontWeight={400} color="secondary">
@@ -74,7 +74,7 @@ export default function Home() {
           ))}
         </Flex>
         <Box color="secondary">
-          <Flex wrap="wrap" gap={4} mb={4} fontSize="xl">
+          <Flex wrap="wrap" gap={4} mb={4} fontSize="md" fontWeight={500}>
             <Link to="/about-me">
               <Text variant="link">About me</Text>
             </Link>

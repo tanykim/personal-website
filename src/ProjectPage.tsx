@@ -47,13 +47,9 @@ export default function ProjectPage() {
 
   useEffect(() => {
     import(`./contents/${projectId}.md`)
-      .then((module) =>
-        fetch(module.default)
-          .then((res) => res.text())
-          .then((md) => {
-            setContent(md);
-          })
-      )
+      .then((module) => {
+        setContent(module.default);
+      })
       .catch((err) => {
         setContent(null);
       });
@@ -78,12 +74,12 @@ export default function ProjectPage() {
             finalYear != null
               ? ` - ${finalYear}`
               : isOngoing
-              ? ` - Present`
-              : ""
+                ? ` - Present`
+                : ""
           }`}
           description={description}
         />
-        <Flex mt={4} gap={8} direction="column">
+        <Flex mt={8} gap={12} direction="column">
           <Flex direction="column" gap={2}>
             <Flex
               wrap="wrap"
@@ -93,8 +89,7 @@ export default function ProjectPage() {
               py={1}
               px={3}
               width="fit-content"
-              borderRadius={8}
-            >
+              borderRadius={8}>
               {types.map((id, i) => (
                 <ProjectTypeLabel
                   key={id}
@@ -111,8 +106,7 @@ export default function ProjectPage() {
                   width="fit-content"
                   py={1}
                   px={3}
-                  borderRadius={8}
-                >
+                  borderRadius={8}>
                   <DataTypeLabel {...getDataType(id)} showData={true} />
                 </Box>
               ))}
@@ -124,8 +118,7 @@ export default function ProjectPage() {
                 <Button
                   variant="project"
                   rightIcon={<MdOpenInNew />}
-                  onClick={() => window.open(url, "_blank")}
-                >
+                  onClick={() => window.open(url, "_blank")}>
                   Open {isPrototype ? "prototype" : "project"}
                 </Button>
               )}
@@ -133,8 +126,7 @@ export default function ProjectPage() {
                 <Button
                   variant="project"
                   rightIcon={<MdPlayCircle />}
-                  onClick={() => window.open(youtube, "_blank")}
-                >
+                  onClick={() => window.open(youtube, "_blank")}>
                   Watch demo
                 </Button>
               )}
@@ -153,8 +145,7 @@ export default function ProjectPage() {
                       key={i}
                       textDecoration="underline"
                       display="inline-block"
-                      ml={i > 0 ? 2 : 0}
-                    >
+                      ml={i > 0 ? 2 : 0}>
                       <Link to={link} target="_blank">
                         {note.type} {note.links.length > 1 ? i + 1 : ""}
                       </Link>

@@ -5,7 +5,7 @@ const allProjects: Project[] = [
     id: "best-bookshelf",
     title: "Best bookshelf",
     year: 2017,
-    isOngoing: true,
+    isOngoing: false,
     description:
       "Data visualization of yearly best books by the New York Times",
     url: "https://projects.tany.kim/best-bookshelf/",

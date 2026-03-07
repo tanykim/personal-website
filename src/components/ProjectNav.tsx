@@ -14,9 +14,8 @@ export default function ProjectNav({ prevProject, nextProject }: Props) {
       width="100%"
       borderTopWidth={1}
       borderTopColor="gray.200"
-      mt={8}
-      pt={8}
-    >
+      mt={12}
+      pt={8}>
       {prevProject != null ? (
         <Flex gap={1} align="center">
           <span className="material-symbols-outlined" style={{ fontSize: 16 }}>
