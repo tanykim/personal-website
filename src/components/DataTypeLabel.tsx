@@ -19,7 +19,7 @@ export default function DataTypeLabel({
       <span className="material-symbols-outlined">{icon}</span>
       <Text>
         {label}
-        {showData ? `${id === "other" ? " cultural" : ""} data` : ""}
+        {showData ? `${id === "cultural" ? " cultural" : ""} data` : ""}
       </Text>
     </Flex>
   );

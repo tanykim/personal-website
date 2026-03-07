@@ -64,7 +64,7 @@ export default function ProjectPage() {
       <Box
         height={48}
         width="100%"
-        backgroundImage={`url(${process.env.PUBLIC_URL}/images/${projectId}.png)`}
+        backgroundImage={`url(${import.meta.env.BASE_URL}images/${projectId}.png)`}
         backgroundSize="cover"
         backgroundPosition="center"
         borderBottomWidth={1}

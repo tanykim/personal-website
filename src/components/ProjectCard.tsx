@@ -29,7 +29,7 @@ export default function ProjectCard({
       >
         <Link to={id}>
           <Box
-            backgroundImage={`url(${process.env.PUBLIC_URL}/images/${id}-sm.png)`}
+            backgroundImage={`url(${import.meta.env.BASE_URL}images/${id}-sm.png)`}
             backgroundSize="cover"
             backgroundPosition="10% 15%"
             height="120px"

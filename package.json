@@ -1,5 +1,5 @@
 {
-  "name": "master-swim-workout",
+  "name": "personal-website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,10 +7,6 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@lexical/react": "^0.12.0",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^13.0.0",
-    "@testing-library/user-event": "^13.2.1",
-    "@types/jest": "^27.0.1",
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
@@ -22,17 +18,15 @@
     "react-markdown": "^9.0.0",
     "react-router": "^6.15.0",
     "react-router-dom": "^6.15.0",
-    "react-scripts": "5.0.1",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build -r https://github.com/tanykim/personal-website.git"
+    "deploy": "gh-pages -d dist -r https://github.com/tanykim/personal-website.git"
   },
   "eslintConfig": {
     "extends": [
@@ -53,8 +47,9 @@
     ]
   },
   "devDependencies": {
-    "@types/jsdom": "^21.1.1",
-    "gh-pages": "^6.0.0"
+    "@vitejs/plugin-react": "^4.0.0",
+    "gh-pages": "^6.0.0",
+    "vite": "^5.0.0"
   },
   "homepage": "https://hello.tany.kim"
 }
