@@ -26,7 +26,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d dist -r https://github.com/tanykim/personal-website.git"
+    "deploy": "gh-pages -d dist -r git@github.com:tanykim/personal-website.git"
   },
   "eslintConfig": {
     "extends": [
