@@ -1,4 +1,4 @@
-# Motivation
+const e=`# Motivation
 
 Even before the smart watch era, I was religious about logging my swimming data, including distance, without knowing I would or could do with the data. Over time, I developed a desire to uncover patterns in my swimming habits, such as daily, weekly, and monthly trends. I also wanted to identify the days when I swam the most.
 
@@ -8,10 +8,4 @@ To fulfill my curiosity, I explored various datasets and visualizations that cou
 
 Since my house has solar panels, the electricity usage data included both positive numbers (when my house relied on the public grid) and negative numbers (when my house supplied electricity back to PG&E).
 
-Inspired by the commit log visualization on GitHub, I applied a similar visualization technique to my daily numerical data. Later, I expanded the visualization to explore weekly and monthly patterns, which allowed me to gain further insights into my swimming and other activities.
-
-# Insights
-
-The visualization of this data has provided me with valuable insights and a deeper understanding of my behavior over time. One of the most notable observations is the comparison between different years within the same dataset.
-
-For instance, in 2019, I could clearly see that my house generated revenue by selling excess electricity. However, the landscape changed dramatically in 2020 due to the pandemic. With the need to stay at home during lockdowns, my house's net electricity usage became positive, indicating that it consumed more electricity than it was able to sell back to the grid.
+Inspired by the commit log visualization on GitHub, I applied a similar visualization technique to my daily numerical data. Later, I expanded the visualization to explore weekly and monthly patterns, which allowed me to gain further insights into my swimming and other activities.`;export{e as default};

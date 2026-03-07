@@ -1,4 +1,4 @@
-# Motivation
+const t=`# Motivation
 
 As I delved deeper into the world of knitting, I discovered a significant challenge that many beginners face, particularly when it comes to reading knitting instructions presented in traditional formats. These instructions are typically in the form of text filled with abbreviations or charts with symbols. While this is the norm in the knitting community, even experienced knitters can find it confusing to follow complex patterns that way.
 
@@ -37,4 +37,4 @@ In traditional printed patterns, knitters often make handwritten notes to mark t
 
 Many knitters still prefer having a printed copy, especially in situations where internet access is limited or unavailable. To accommodate these knitters, implementing a print-friendly layout for the pattern can be incredibly helpful. This ensures that the pattern can be easily printed without losing any readability or important formatting.
 
-By incorporating both digital annotation capabilities and a print-friendly layout, interactive knitting patterns can cater to the preferences and needs of a wide range of knitters, enhancing their knitting experience both online and offline.
+By incorporating both digital annotation capabilities and a print-friendly layout, interactive knitting patterns can cater to the preferences and needs of a wide range of knitters, enhancing their knitting experience both online and offline.`;export{t as default};
