@@ -1,5 +1,10 @@
 export type ProjectType = "vis" | "product" | "eng" | "analytics" | "research";
-export type DataType = "personal" | "sports" | "social" | "other";
+export type DataType =
+  | "personal"
+  | "sports"
+  | "exercise"
+  | "social"
+  | "cultural";
 
 export interface Project {
   id: string;

@@ -34,8 +34,8 @@ const textTheme = defineStyleConfig({
 
 export const theme = extendTheme({
   fonts: {
-    heading: "'Mukta', -apple-system, 'Helvetica Neue', serif",
-    body: "'Mukta', -apple-system, 'Helvetica Neue', serif",
+    heading: "'IBM Plex Sans', -apple-system, 'Helvetica Neue', serif",
+    body: "'IBM Plex Sans', -apple-system, 'Helvetica Neue', serif",
   },
   styles: {
     global: {

@@ -17,9 +17,10 @@ export const projectTypes: { id: ProjectType; label: string }[] = [
 
 export const dataTypes: { id: DataType; icon: string; label: string }[] = [
   { id: "personal", icon: "favorite", label: "Personal" },
-  { id: "sports", icon: "sports_baseball", label: "Sports / exercise" },
+  { id: "sports", icon: "sports_baseball", label: "Sports" },
+  { id: "exercise", icon: "exercise", label: "Exercise" },
   { id: "social", icon: "thumb_up", label: "Social media" },
-  { id: "other", icon: "comic_bubble", label: "Other" },
+  { id: "cultural", icon: "movie", label: "Cultural" },
 ];
 
 function getYear(): number {
